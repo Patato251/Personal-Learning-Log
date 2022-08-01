@@ -8,7 +8,30 @@
 
 ---
 
-# Javscript Basics 101 Notes (only things not known):
+- [Javascript Learning Log](#javascript-learning-log)
+  - [Purpose](#purpose)
+- [Fundamentals Part 1 - (only things not known):](#fundamentals-part-1---only-things-not-known)
+  - [Hello World Examples](#hello-world-examples)
+  - [What is JS at a high level](#what-is-js-at-a-high-level)
+  - [Linking a JS file from HTML to the JS file itself](#linking-a-js-file-from-html-to-the-js-file-itself)
+  - [Values and Variables](#values-and-variables)
+  - [Data Types](#data-types)
+  - [Variable Declaration Methods](#variable-declaration-methods)
+  - [Basic Operators and operator precedence](#basic-operators-and-operator-precedence)
+  - [Strings and template literals](#strings-and-template-literals)
+  - [If/Else statements](#ifelse-statements)
+  - [Type conversion and coercion](#type-conversion-and-coercion)
+  - [Truthy and Falsy values](#truthy-and-falsy-values)
+  - [Equality Operators](#equality-operators)
+  - [Boolean logic](#boolean-logic)
+  - [Switch Statements](#switch-statements)
+  - [Statements and expressions](#statements-and-expressions)
+  - [Ternary Operator](#ternary-operator)
+- [Fundamentals Part 2:](#fundamentals-part-2)
+
+---
+
+# Fundamentals Part 1 - (only things not known):
 
 ## Hello World Examples
 
@@ -174,12 +197,13 @@ where variableName is the name of whichever variable needs to be inserted
 - Essentially either && or || operations
 
 ## Switch Statements
+
 - We use breaks to limit it cycling through all options in a switch case statement
 - This means, if we don't insert break after each option, it will iterate through the code for each switch case statement afterwards
 
 ## Statements and expressions
 
-- Expression = Produces a values  
+- Expression = Produces a values
 - Statement = Larger chunk that doesnt produce a value
 
 - Strings are expressions technically
@@ -187,11 +211,13 @@ where variableName is the name of whichever variable needs to be inserted
   - Template literal
 
 ## Ternary Operator
+
 - Can assign a const with a conditional/ternary operator
 - Example:
   - `const testVar = sampleCondition ? true return : false return`
-- Can also use them inside a template literal where statements usually can't be used, and take advantage of this 
+- Can also use them inside a template literal where statements usually can't be used, and take advantage of this
 - This is because this spits out a pure value so similar to an expression and produces a value rather than define/assign one
 
-## Differences between each JS version
-- 
+---
+
+# Fundamentals Part 2:
