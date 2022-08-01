@@ -117,6 +117,7 @@ _Examples:_
 - `Typeof` is classified as an operator
 
 - Standard comparator operators
+
   - `>, <, >=, <= ===, !==`
 
 - Operator precedence
@@ -129,17 +130,68 @@ _Examples:_
 - Template literals allow for inserting of variables into string easily rather than concatting all string variables required
 - Need to use the `` keys
 - Example:
+
 ```
 `I'm a ${variableName}`
 ```
-where variableName is the name of whichever variable needs to be inserted
 
+where variableName is the name of whichever variable needs to be inserted
 
 ## If/Else statements
 
 - Referred to as control structures
-- Syntax is standard 
+- Syntax is standard
 
 ## Type conversion and coercion
 
+- Conversion = manual conversion of one type to another
+- Coercion = auto conversion, happens implicitly
+- Use specific type conversion functions to perform specific mathematical actions
+- For coercion:
+  - `+` converts into string all types
+  - `-, * and /` converts into numbers for correct types
+
+## Truthy and Falsy values
+
+- Conversion of values/statements when checked and produce a boolean style value of either truthy or falsy
+- Five main falsy values:
+  - `0, '', undefined, null or NaN`
+- Most values like this will be due to type coercion
+- Two main scenarios for type coercion to determine boolean value such as this is:
+  - Logical context
+  - Logic operators
+
+## Equality Operators
+
+- Single `=` is assignment
+- Double `=` is equality operation with type coercion (so auto converts strings and numbers before comparing)
+- Triple `=` is eqaulity operation
+- Consider them as loose and strict comparators
+
+## Boolean logic
+
+- Usage of truth table and the way we can compare booleans to output a total boolean value calculation
+- Essentially either && or || operations
+
+## Switch Statements
+- We use breaks to limit it cycling through all options in a switch case statement
+- This means, if we don't insert break after each option, it will iterate through the code for each switch case statement afterwards
+
+## Statements and expressions
+
+- Expression = Produces a values  
+- Statement = Larger chunk that doesnt produce a value
+
+- Strings are expressions technically
+- Some places that only expect expressions:
+  - Template literal
+
+## Ternary Operator
+- Can assign a const with a conditional/ternary operator
+- Example:
+  - `const testVar = sampleCondition ? true return : false return`
+- Can also use them inside a template literal where statements usually can't be used, and take advantage of this 
+- This is because this spits out a pure value so similar to an expression and produces a value rather than define/assign one
+
+## Differences between each JS version
 - 
