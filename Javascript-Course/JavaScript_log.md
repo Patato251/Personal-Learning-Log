@@ -28,6 +28,19 @@
   - [Statements and expressions](#statements-and-expressions)
   - [Ternary Operator](#ternary-operator)
 - [Fundamentals Part 2:](#fundamentals-part-2)
+  - [Enabling Strict Mode](#enabling-strict-mode)
+  - [Functions](#functions)
+    - [Function declarations vs expressions](#function-declarations-vs-expressions)
+    - [Arrow Functions](#arrow-functions)
+  - [Arrays](#arrays)
+    - [Array operation functions included with JS](#array-operation-functions-included-with-js)
+  - [Objects](#objects)
+    - [Retrieving data in objects](#retrieving-data-in-objects)
+    - [Object methods](#object-methods)
+  - [Loops](#loops)
+    - [For Loops](#for-loops)
+    - [Looping through array, breaking and continuing](#looping-through-array-breaking-and-continuing)
+    - [Looping backwards and loop inside loop](#looping-backwards-and-loop-inside-loop)
 
 ---
 
@@ -221,3 +234,173 @@ where variableName is the name of whichever variable needs to be inserted
 ---
 
 # Fundamentals Part 2:
+
+## Enabling Strict Mode
+
+- Introduce the line at the start of every file/code block:
+  - `'use strict'`
+- Produces errors in the console that can easily be due to misspelling, linting, minor errors and allows for more strict development guidelines preventing accidental errors and bugs
+- Also reserves keywords and will spit errors for all these
+
+## Functions
+
+- Referred to as function declaration usually
+- Structure is:
+
+```
+function functionName (inputParams) {
+  Code block
+  return value;
+}
+```
+
+- Note do not need to define input params data type, it is defined by whatever is passed
+- Do not also need to state the returning value/data type in JS
+
+### Function declarations vs expressions
+
+- Can define an expression called an anonymous function/function expression which is similar to how we can define functions in react
+
+```
+const constName = function (inputParams) {
+  Code block
+  return value;
+}
+```
+
+- Defines the function essentially same way, and we canll it the same way, but we call the constName given rather than it being a function name
+- This style of writing this given chunk of code is more of an expression than a function declaration instead
+- Essentially a function declaration vs function expression
+- Advantage is we can call function expression whenever in code, without initialisation/declaration required to be defined above when we call it
+
+### Arrow Functions
+
+- The way we define functions usually with React development for simplistic sake
+- Most recent way to define functions as of ES2015
+
+```
+const constName = inputParams => Code Block (implicit return)
+OR
+const constName = inputParam => {
+  Code Block
+  return value;
+}
+```
+
+- Arrow functions do not get a keyword for calling throughout code
+
+## Arrays
+
+- Two ways defining arrays:
+  - Literal syntax:
+  ```
+  const arrayName = [item1, item2, item3];
+  ```
+  - Function syntax:
+  ```
+  const arrayName = new Array(item1, item2, item3)
+  ```
+- Array not primitive value, not immutable
+- Can put array inside an array by just placing it in as an object
+- Arrays can have whichever data type per item inside the array
+
+### Array operation functions included with JS
+
+- push function: Adds element to end of array. Returns length of array
+- unshift: Adds element to the start of array. Returns length of array
+- pop: Removes element at end of array. Returns length of the array
+- shift: Removes element at the start of the array. Returns length of the array
+- indexOf: Checks where the index of the element is if it is there. Returns -1 if false
+- includes: checks if element being passed is in array. Returns boolean
+
+## Objects
+
+- Key Value Pair data structure
+- Defining object:
+  - Literal Syntax
+  ```
+  const objectName = {
+    key1: value,
+    key2: value,
+  }
+  ```
+
+### Retrieving data in objects
+
+- Can refer to items in object by using dot:
+
+  ```
+  const object = {
+    key1: value,
+    key2: value2,
+  }
+
+  object.key1;
+  ```
+
+- Can also bracket notation:
+
+  ```
+  const object = {
+    key1: value,
+    key2: value2,
+  }
+
+  object['key1'];
+  ```
+
+- Can put expressions in the square bracket form
+- Can add values with this notation if we assign a value instead, that way inserting into object can be done by:
+  ```
+  array.key = value
+  array['key'] = value
+  ```
+
+### Object methods
+
+- Any function placed inside an object is called a method
+
+```
+const object = {
+  key1: value 1,
+  key2: function (inputParams) {
+    return value 2;
+  },
+}
+```
+
+- Call same way as we refer to object with dot or bracket notation (just add the bracket at the end to have inputParam passed)
+- Instead of passing params, we can also reference earlier key value pair in same object with 'this' keyword
+- Can also refer to the object as 'this' keyword, and add in a new key/value pair by doing:
+
+```
+const object = {
+  key1: value1,
+  key2: value2,
+
+  objectMethod: function () {
+    this.key3 = value
+    return this.key3;
+  }
+}
+```
+
+- This will allow calling of method outside in other code
+- Will add key3 key/value pair to object for later usage
+
+## Loops
+
+### For Loops
+
+- Standard notation:
+  - ` for (starting index; true index condition; incremental action)`
+
+### Looping through array, breaking and continuing
+
+- Standard method, make true index condition related to length of array, loop through using starting index variable as part of code chunk for the loop
+- Can use break and continue statements inside the loop code block in order to easily allow for certain conditions to occur inside or to break a loop early
+  - Example: continue if elements being inserted are string, break if element inserted is number, checking through use of typeof function
+
+### Looping backwards and loop inside loop
+
+-
