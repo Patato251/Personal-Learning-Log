@@ -1,0 +1,9 @@
+# Hacker Rank Warmup Challenges
+
+## Sock Pair Count from given a number and array with indexes for each sock
+
+![Sock_Sample_Question](Images/Sock_count_from_pairs.JPG "Sock Solution")
+
+## Valley count given number of steps and if step is up and down from a string of characters
+
+![Valley_Sample_Question](Images/Valley_count_from_elevation.JPG "Valley Solution")

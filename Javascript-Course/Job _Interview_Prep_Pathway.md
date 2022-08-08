@@ -8,6 +8,9 @@ The following image dictates the courses and pathways required to learn the requ
 
 ## How Javascript works behind the scenes
 
+### Overview of JS BTS
+
+
 
 ## Data Structures, Modern Operators and Strings
 
