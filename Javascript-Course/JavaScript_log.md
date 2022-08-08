@@ -41,6 +41,7 @@
     - [For Loops](#for-loops)
     - [Looping through array, breaking and continuing](#looping-through-array-breaking-and-continuing)
     - [Looping backwards and loop inside loop](#looping-backwards-and-loop-inside-loop)
+    - [While Loop](#while-loop)
 
 ---
 
@@ -403,4 +404,8 @@ const object = {
 
 ### Looping backwards and loop inside loop
 
--
+- Looping backwards by using starting index as final index
+
+### While Loop
+
+- Standard while condition to be placed inside the while loops conditional statement when declaring
