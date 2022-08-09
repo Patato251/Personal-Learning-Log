@@ -26,4 +26,115 @@ const restaurant = {
       close: 24,
     },
   },
+
+  order: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
+
+  deliver: function ({
+    time = '8:00',
+    starterNumber = '0',
+    address = 'Mock Address',
+  }) {
+    console.log(time, starterNumber, address);
+  },
+
+  orderPasta: function (ingredient1, ingredient2, ingredient3) {
+    console.log(
+      `The ingredients in the pasta are ${ingredient1}, ${ingredient2} and ${ingredient3}`
+    );
+  },
 };
+
+/** Destructuring Arrays */
+const testArray = [1, 2, 3];
+
+let [x, y, z] = testArray;
+
+console.log(testArray);
+console.log(x, y);
+
+[x, y] = [y, x];
+console.log(x, y);
+
+/** How to return two values through one function */
+const [starterCourse, mainCourse] = restaurant.order(0, 2);
+// log: The starter course is Focaccia, and the main course is Risotto
+console.log(
+  `The starter course is ${starterCourse}, and the main course is ${mainCourse}`
+);
+
+/** Destructuring Objects */
+const { name, mainMenu, openingHours } = restaurant;
+console.log(name, mainMenu, openingHours);
+
+/** Destructuring with different names */
+const {
+  name: restaurantName,
+  mainMenu: mainFoods,
+  openingHours: hours,
+} = restaurant;
+console.log(restaurantName, mainFoods, hours); // Same result as above
+
+/** Default Value */
+const { menu = [], mainMenu: mains = [] } = restaurant;
+console.log(menu, mains); // Log: []  ['Pizza', 'Pasta', 'Risotto']
+
+/** Mutating variables from object */
+let a = 111;
+let b = 999;
+const object = { a: 22, b: 44, c: 88 };
+({ a, b } = object);
+console.log(a, b); // Changes from original value, to match the destructured object key values inside the object. In this case changes from 111 and 999 to 22 and 44 respectively
+
+/** Sample Application for obj destructuring */
+// Check above for function
+restaurant.deliver({
+  time: '10:30',
+  starterNumber: 2,
+  address: 'Test Address',
+});
+
+/** Spread Operator */
+const spreadArray = [1, 5, 9];
+// Manual assignment of prev values
+const badArray = [3, 4, spreadArray[0], spreadArray[1], spreadArray[2]];
+
+// Spread assignment
+const goodArray = [3, 4, ...spreadArray];
+console.log(goodArray); // This is array with all it's inherent array data type properties
+
+console.log(...goodArray); // This is just values in array
+
+/** Samples for Spread Operator */
+// New array
+const newMenu = [...mainMenu, 'Gnocci'];
+console.log(newMenu);
+
+// Copying array
+const copiedArray = [...newMenu];
+console.log(copiedArray); // Same as above
+
+// Joining 2 arrays
+const joinedArray = [...newMenu, ...restaurant.starterMenu];
+console.log(...joinedArray);
+
+/** Samples of other iterable spreads */
+// String
+const sampleStr = 'Patrick';
+const individualLetters = [...sampleStr];
+console.log(individualLetters);
+
+/** Sample function call with spread input param */
+
+const ingredientsObj = ['Mushroom', 'Cheese', 'Beef Meat'];
+restaurant.orderPasta(...ingredientsObj); // Better alternative than calling each array element individually
+
+/** Object example for spread */
+const newResturant = { ...restaurant, foundedIn: 1908 };
+console.log(newResturant); // New obj includes new foundedIn key/value pair
+
+// Copying object
+const copiedResturant = { ...newResturant };
+copiedResturant.name = 'New name';
+console.log(copiedResturant);
