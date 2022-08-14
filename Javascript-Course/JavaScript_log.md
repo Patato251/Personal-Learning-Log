@@ -10,7 +10,7 @@
 
 - [Javascript Learning Log](#javascript-learning-log)
   - [Purpose](#purpose)
-- [Fundamentals Part 1 - (only things not known):](#fundamentals-part-1---only-things-not-known)
+- [Fundamentals Part 1 - (only things not known)](#fundamentals-part-1---only-things-not-known)
   - [Hello World Examples](#hello-world-examples)
   - [What is JS at a high level](#what-is-js-at-a-high-level)
   - [Linking a JS file from HTML to the JS file itself](#linking-a-js-file-from-html-to-the-js-file-itself)
@@ -27,7 +27,7 @@
   - [Switch Statements](#switch-statements)
   - [Statements and expressions](#statements-and-expressions)
   - [Ternary Operator](#ternary-operator)
-- [Fundamentals Part 2:](#fundamentals-part-2)
+- [Fundamentals Part 2](#fundamentals-part-2)
   - [Enabling Strict Mode](#enabling-strict-mode)
   - [Functions](#functions)
     - [Function declarations vs expressions](#function-declarations-vs-expressions)
@@ -45,7 +45,7 @@
 
 ---
 
-# Fundamentals Part 1 - (only things not known):
+# Fundamentals Part 1 - (only things not known)
 
 ## Hello World Examples
 
@@ -234,7 +234,7 @@ where variableName is the name of whichever variable needs to be inserted
 
 ---
 
-# Fundamentals Part 2:
+# Fundamentals Part 2
 
 ## Enabling Strict Mode
 
@@ -294,13 +294,17 @@ const constName = inputParam => {
 
 - Two ways defining arrays:
   - Literal syntax:
+
   ```
   const arrayName = [item1, item2, item3];
   ```
+
   - Function syntax:
+
   ```
   const arrayName = new Array(item1, item2, item3)
   ```
+
 - Array not primitive value, not immutable
 - Can put array inside an array by just placing it in as an object
 - Arrays can have whichever data type per item inside the array
@@ -319,6 +323,7 @@ const constName = inputParam => {
 - Key Value Pair data structure
 - Defining object:
   - Literal Syntax
+
   ```
   const objectName = {
     key1: value,
@@ -352,6 +357,7 @@ const constName = inputParam => {
 
 - Can put expressions in the square bracket form
 - Can add values with this notation if we assign a value instead, that way inserting into object can be done by:
+
   ```
   array.key = value
   array['key'] = value
@@ -394,7 +400,7 @@ const object = {
 ### For Loops
 
 - Standard notation:
-  - ` for (starting index; true index condition; incremental action)`
+  - `for (starting index; true index condition; incremental action)`
 
 ### Looping through array, breaking and continuing
 
