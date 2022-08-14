@@ -44,6 +44,11 @@ const restaurant = {
       `The ingredients in the pasta are ${ingredient1}, ${ingredient2} and ${ingredient3}`
     );
   },
+
+  orderPizza: function (mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient);
+    console.log(otherIngredients);
+  },
 };
 
 /** Destructuring Arrays */
@@ -138,3 +143,38 @@ console.log(newResturant); // New obj includes new foundedIn key/value pair
 const copiedResturant = { ...newResturant };
 copiedResturant.name = 'New name';
 console.log(copiedResturant);
+
+/** Samples for Rest operator */
+
+const [no1, no2, ...others] = [1, 2, 3, 4, 5, 7];
+console.log(no1, no2, others);
+
+// Using both spread and rest
+// This will destructure and assign the pizza and risotto variables through spread destructuring, whilst sending the remaining items in the startermenu into the otherMenuItems variable we rested
+const [pizza, , risotto, ...otherMenuItems] = [
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu,
+];
+console.log(pizza, risotto, otherMenuItems);
+
+// Using both spread and rest for objects
+// Similar effect to array, but even easier as objects will key value pair easier
+const { sat, ...weekdayHours } = restaurant.openingHours;
+console.log(sat, weekdayHours); // Result is one object with just saturday values for opening hours, and the other object will hold the opening hours with remainder of orig object elements
+
+// Functions examples
+
+const sampleAdd = function (...numbers) {
+  console.log(`Input params are: ${numbers}`);
+};
+
+sampleAdd(1, 5, 9, 11);
+sampleAdd(2, 5, 7, 12, 4, 6);
+
+const testArrInput = [12, 42, 56];
+sampleAdd(...testArrInput);
+// Note above passed in as array and can use array methods to alter the numbers for whichever use case required
+// Another way to use spread is shown below
+
+// Sample function with resturant object
+restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
