@@ -143,6 +143,59 @@ const [x, , [y, z] = arr;
   - Can be used to separate specific variables being inputted for usage in certain data or functionality
   - Can be used to dynamically perform actions on an unknown number of variables
 
+### Short Circuiting
+
+- Logical operators of || and && can have 3 properties
+
+  - Use any data type
+  - Return any data type
+  - Perform short-circuiting
+
+- Short circuiting means if the statement seems to be true, it will return the first value in a statement:
+
+  - `(3 || 'RandomString') = 3`
+  - This is because the first the first truthy value is 3
+
+- This means any falsy values we pass (undefined, blank etc) won't be returned and instead the next possible truthy value is returned
+
+  - It will always return the first truthy value in the statement
+
+- Short circuiting is a more efficient way of setting up equivalent to a ternary for variables that we will want to just check if they are defined or not
+
+  - Essentially use shrot circuiting to set up a default method and bind it automatically
+
+- Opposite of OR short circuit
+  - Will immediately return the first falsy value found in the statement
+
+### Nullish Coalescing Operator
+
+- Similar to working with a short circuit with the && operators
+- The AND operators will return the first falsy value found
+- Instead however, this will retunr the first null value found and operate from there
+  - Only works with Null or Undefined essentially
+
+### Logical Assignment Operators
+
+- OR assignment operator
+
+  - Will assign value if the statement is given as falsy
+  - E.g.: `object.property ||= value;`
+    - This value will only be assigned if the property is essentially read as falsy from the object (therefore meaning it does not exist yet)
+    - But this could also occurr if the value was initially 0, null or undefined since they are also falsy
+  - Check logical assignment code examples
+
+- To get around this, we instead use the nullish assignment operator equivalent
+  - `object.property ??= value;`
+  - When this is 0, null or undefined, since this is based off null style values, then it will return the original value of 0 if predefined
+
+- AND operator
+
+  - Will assign value if the given statement is truthy
+  - E.g. `object.property &&= value`
+  - This will only assign if the original value was potentially already existing in an object or if there was a given value for the property
+
+
+
 ## Closer look at functions
 
 ## Working with Arrays
